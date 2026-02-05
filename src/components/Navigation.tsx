@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Home, Briefcase, FolderOpen, Palette, Menu, X } from 'lucide-react';
+import { Home, Briefcase, FolderOpen, Palette, Menu, X, Linkedin, Github } from 'lucide-react';
 import { useState } from 'react';
 
 interface NavigationProps {
@@ -34,7 +34,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-6 lg:gap-8">
+          <div className="hidden md:flex gap-6 lg:gap-8 items-center">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = currentPage === item.id;
@@ -60,6 +60,28 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
                 </motion.button>
               );
             })}
+            
+            {/* Social Links */}
+            <div className="flex items-center gap-3 ml-2 pl-6 border-l border-gray-200">
+              <a
+                href="https://www.linkedin.com/in/vivaanchhabra/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-blue-600 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://github.com/VivChhabra"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-gray-900 transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -101,6 +123,28 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
                 </button>
               );
             })}
+            
+            {/* Social Links */}
+            <div className="flex items-center gap-3 pt-2 mt-2 border-t border-gray-200">
+              <a
+                href="https://www.linkedin.com/in/vivaanchhabra/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                <Linkedin className="w-5 h-5" />
+                <span className="font-medium">LinkedIn</span>
+              </a>
+              <a
+                href="https://github.com/VivChhabra"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+              >
+                <Github className="w-5 h-5" />
+                <span className="font-medium">GitHub</span>
+              </a>
+            </div>
           </div>
         </motion.div>
       )}

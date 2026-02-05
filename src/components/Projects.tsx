@@ -4,6 +4,7 @@ import { Footer } from './Footer';
 
 const packVaultCover = 'https://images.unsplash.com/photo-1664997296099-5a0b63ab0196?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb2tlbW9uJTIwY2FyZHMlMjBjb2xsZWN0aW9ufGVufDF8fHx8MTc2ODE5MjE1NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral';
 const ugrtCover = 'https://i.imgur.com/a9QS7Hg.jpeg';
+const lockInCover = 'https://i.imgur.com/qUZjioH.png';
 
 export function Projects() {
   return (
@@ -122,6 +123,62 @@ export function Projects() {
                 >
                   <ExternalLink className="w-4 h-4" />
                   Visit Website
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* LockIn */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="bg-white border-2 border-gray-900 rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div className="h-48 sm:h-64 overflow-hidden relative flex items-center justify-center">
+              <img src={lockInCover} alt="LockIn Cover" className="absolute inset-0 w-full h-full object-cover" />
+              <div className="relative z-10 text-white text-center drop-shadow-lg px-4">
+                <h3 className="text-3xl sm:text-5xl font-bold mb-2 sm:mb-3">LockIn</h3>
+                <p className="text-base sm:text-xl">Valorant Duo-Matching Web App</p>
+              </div>
+            </div>
+
+            <div className="p-5 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">LockIn</h3>
+              <p className="text-sm sm:text-base text-gray-700 mb-4">
+                LockIn is a Valorant duo-matching web app built during a 36-hour hackathon to help players find compatible teammates in a safer, more welcoming way. Inspired by real experiences with toxic matchmaking, LockIn uses profile-based matching and AI-generated compatibility explanations to connect players based on playstyle, availability, and preferences. I worked across frontend, backend, and deployment, building the React UI, implementing authentication and profile management, integrating an AI matching system, and deploying the full stack to production.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
+                {['TypeScript', 'React', 'Vite', 'Node.js'].map((tech, i) => (
+                  <span key={i} className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mb-4 sm:mb-6 text-xs sm:text-sm text-gray-600">
+                <strong>Project Timeline:</strong> 36-hour Hackathon
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://github.com/VivChhabra/LockIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center gap-2 bg-gray-900 text-white px-4 py-2.5 rounded-lg hover:bg-gray-800 transition-colors font-medium text-sm"
+                >
+                  <Github className="w-4 h-4" />
+                  View Code
+                </a>
+                <a
+                  href="https://lock-in-mu.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center gap-2 bg-purple-500 text-white px-4 py-2.5 rounded-lg hover:bg-purple-600 transition-colors font-medium text-sm"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Live Demo
                 </a>
               </div>
             </div>

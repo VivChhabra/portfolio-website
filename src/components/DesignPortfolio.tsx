@@ -67,6 +67,45 @@ export function DesignPortfolio() {
             </div>
           </motion.div>
 
+          {/* LockIn Figma Prototype */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="bg-white border-2 border-gray-900 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg"
+          >
+            <div className="bg-[#8b5cf6] p-4 sm:p-6">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1">LockIn Design</h2>
+                  <p className="text-sm sm:text-base text-purple-100">Interactive Figma Prototype</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-4 sm:p-6">
+              <div className="mb-4 sm:mb-6">
+                <p className="text-sm sm:text-base text-gray-700 mb-4">
+                  Complete UI/UX design for LockIn, a Valorant duo-matching web application. 
+                  The prototype showcases the full user workflow from profile creation to AI-powered teammate matching.
+                </p>
+              </div>
+
+              {/* Figma Prototype Embed */}
+              <div className="mb-4">
+                <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3">Interactive Prototype</h3>
+                <div className="w-full aspect-video bg-gray-100 rounded-lg overflow-hidden border-2 border-gray-300">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/33pVioaFYHhWawAEhsxURJ/LockIn?node-id=52-23&p=f&t=eVd3IrFJ2kttssZf-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=52%3A23"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <p className="text-xs sm:text-sm text-gray-600 mt-2">Click and interact with the prototype above to explore the design!</p>
+              </div>
+            </div>
+          </motion.div>
+
           {/* Cozy Singh - Game Project */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}

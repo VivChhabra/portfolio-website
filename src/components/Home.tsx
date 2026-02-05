@@ -55,24 +55,37 @@ export function Home({ onNavigate }: HomeProps) {
                 </div>
                 
                 {/* Resume and LinkedIn buttons */}
-                <div className="flex gap-2 sm:gap-3">
+                <div className="flex flex-col gap-2 sm:gap-3">
+                  <div className="flex gap-2 sm:gap-3">
+                    <a
+                      href="https://docs.google.com/document/d/1_Nv-QaIjZy-L3fD_4GB0s_XKCJ2qWjJUk6G7dYgLFxI/edit?tab=t.0"
+                      className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-200 text-gray-900 rounded-lg font-medium hover:bg-gray-300 transition-colors duration-200 text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={resumeIcon} alt="" className="w-4 h-4 sm:w-5 sm:h-5" />
+                      Resume
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/vivaanchhabra/"
+                      className="px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-500 transition-colors duration-200 text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={linkedinIcon} alt="" className="w-4 h-4 sm:w-6 sm:h-6" />
+                      LinkedIn
+                    </a>
+                  </div>
                   <a
-                    href="https://docs.google.com/document/d/1_Nv-QaIjZy-L3fD_4GB0s_XKCJ2qWjJUk6G7dYgLFxI/edit?tab=t.0"
-                    className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-200 text-gray-900 rounded-lg font-medium hover:bg-gray-300 transition-colors duration-200 text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
+                    href="https://github.com/VivChhabra"
+                    className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors duration-200 text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={resumeIcon} alt="" className="w-4 h-4 sm:w-5 sm:h-5" />
-                    Resume
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/vivaan-chhabra-856244266/"
-                    className="px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-500 transition-colors duration-200 text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={linkedinIcon} alt="" className="w-4 h-4 sm:w-6 sm:h-6" />
-                    LinkedIn
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
                   </a>
                 </div>
               </motion.div>
@@ -116,6 +129,82 @@ export function Home({ onNavigate }: HomeProps) {
               })}
             </div>
           </motion.div>
+        </motion.div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12 font-calamity">
+            Skills
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { name: 'C', level: 80, color: '#52B788', image: 'https://i.imgur.com/bDQWQhZ.jpeg' },
+              { name: 'Figma', level: 80, color: '#FF9F1C', image: 'https://i.imgur.com/zbmFdxg.jpeg' },
+              { name: 'Aseprite', level: 80, color: '#B388EB', image: 'https://i.imgur.com/xrJSPw9.jpeg' },
+              { name: 'Java', level: 70, color: '#74C0FC', image: 'https://i.imgur.com/lUuDKjf.jpeg' },
+              { name: 'Godot', level: 70, color: '#FFD166', image: 'https://i.imgur.com/DMQZSIH.jpeg' },
+              { name: 'React', level: 60, color: '#FF6B6B', image: 'https://i.imgur.com/mTmQVC3.jpeg' },
+              { name: 'TypeScript', level: 60, color: '#FF8FA3', image: 'https://i.imgur.com/NyHDTko.jpeg' },
+              { name: 'Python', level: 50, color: '#5390D9', image: 'https://i.imgur.com/evdL3Mf.jpeg' },
+            ].map((skill, index) => (
+              <motion.div
+                key={skill.name}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="space-y-2"
+              >
+                <div className="flex justify-between items-center">
+                  <span className="font-medium text-gray-900 text-sm sm:text-base">
+                    {skill.name}
+                  </span>
+                  <span className="text-gray-600 text-xs sm:text-sm font-medium">
+                    {skill.level}%
+                  </span>
+                </div>
+                <div className="relative w-full bg-gray-200 rounded-full h-3 overflow-visible">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${skill.level}%` }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: index * 0.1 + 0.2, ease: 'easeOut' }}
+                    className="h-full rounded-full relative"
+                    style={{ backgroundColor: skill.color }}
+                  >
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: index * 0.1 + 1.2 }}
+                      whileHover={{ y: -8, scale: 1.15, boxShadow: '0 12px 24px rgba(0, 0, 0, 0.3)' }}
+                      className="absolute -right-7 sm:-right-8 -top-6 sm:-top-7 w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-lg border-2 border-gray-900 shadow-lg cursor-pointer overflow-hidden p-0.5"
+                      style={{ boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)' }}
+                    >
+                      <img
+                        src={skill.image}
+                        alt=""
+                        className="w-full h-full"
+                        style={{ 
+                          transform: `scaleX(-1) ${skill.name === 'Java' || skill.name === 'Python' ? 'scale(1.2)' : ''} ${skill.name === 'C' ? 'translateY(-15%)' : ''}`, 
+                          imageRendering: 'pixelated',
+                          objectFit: 'cover'
+                        }}
+                      />
+                    </motion.div>
+                  </motion.div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </section>
 

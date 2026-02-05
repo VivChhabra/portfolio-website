@@ -20,7 +20,7 @@ export function Footer() {
               </a>
               
               <a
-                href="#"
+                href="https://www.linkedin.com/in/vivaanchhabra/"
                 className="px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-500 transition-colors duration-200 text-xs sm:text-sm flex items-center gap-2"
                 target="_blank"
                 rel="noopener noreferrer"
