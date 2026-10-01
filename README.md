@@ -1,11 +1,47 @@
+# Vivaan Chhabra — Portfolio Website
 
-  # Portfolio Website for Student
+Personal portfolio site built with React, Vite, and Tailwind CSS, showcasing education, skills, projects, and professional experience.
 
-  This is a code bundle for Portfolio Website for Student. The original project is available at https://www.figma.com/design/1cxfqQnWYmVcXb375Lq2NA/Portfolio-Website-for-Student.
+Originally generated with [Figma Make](https://www.figma.com/make) and customized since.
 
-  ## Running the code
+## Tech Stack
 
-  Run `npm i` to install the dependencies.
+- React 18 + Vite 6
+- Tailwind CSS 4
+- Radix UI components
+- Material UI icons (`@mui/icons-material`)
+- Framer Motion (`motion`) for animations
 
-  Run `npm run dev` to start the development server.
-  
+## Running Locally
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```
+src/
+  app/
+    App.tsx              Root app component
+    components/          Page sections (Hero, Home, Projects, WorkExperience, Navigation, Footer, etc.)
+  styles/                 Global styles, theme, and Tailwind config
+```
+
+## Notes
+
+`package.json` previously contained malformed duplicate dependency entries (e.g. `"@emotion/react@11.14.0": "npm:@emotion/react@11.14.0"`), a known artifact of some Figma Make exports, which broke `npm install` on Vercel with an `EINVALIDPACKAGENAME` error. These have been removed, keeping only the standard `"package": "version"` entries. `npm install` and `npm run build` both verified working as of this fix.
